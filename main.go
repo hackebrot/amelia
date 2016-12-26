@@ -4,6 +4,8 @@ import (
 	"flag"
 	"fmt"
 	"os"
+
+	"github.com/hackebrot/amelia/amelia"
 )
 
 func main() {
@@ -28,7 +30,11 @@ func main() {
 		os.Exit(1)
 	}
 
-	fmt.Printf("description %q\n", *description)
-	fmt.Printf("public %v\n", *public)
-	fmt.Printf("files %v\n", files)
+	g, err := amelia.NewGist(description, public, files)
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "ERROR: %v\n", err)
+		os.Exit(1)
+	}
+
+	fmt.Printf("gist %+v\n", g)
 }

@@ -1,6 +1,10 @@
 package amelia
 
-import "time"
+import (
+	"fmt"
+	"io/ioutil"
+	"time"
+)
 
 // User represents a GitHub user.
 type User struct {
@@ -25,4 +29,28 @@ type Gist struct {
 	Files       map[GistFilename]GistFile `json:"files,omitempty"`
 	HTMLURL     *string                   `json:"html_url,omitempty"`
 	CreatedAt   *time.Time                `json:"created_at,omitempty"`
+}
+
+// NewGist reads the given files and creates a new Gist
+func NewGist(description *string, public *bool, fileNames []string) (*Gist, error) {
+	files := make(map[GistFilename]GistFile)
+	for _, name := range fileNames {
+		raw, err := ioutil.ReadFile(name)
+		if err != nil {
+			return nil, fmt.Errorf("unable to read file: %v", err)
+		}
+
+		content := string(raw)
+		files[GistFilename(name)] = GistFile{
+			Filename: &name,
+			Content:  &content,
+		}
+	}
+
+	g := &Gist{
+		Description: description,
+		Public:      public,
+		Files:       files,
+	}
+	return g, nil
 }
