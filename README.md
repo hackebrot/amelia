@@ -43,7 +43,13 @@ To create a secret Gist with the default description and multiple files run the 
     $ amelia file1.txt file2.txt
 
 
+## License
+
+Distributed under the terms of the [MIT License][MIT], amelia is free and open
+source software.
+
 [amelia]: https://github.com/hackebrot/amelia
 [github-api]: https://developer.github.com/v3/
 [github-auth]: https://developer.github.com/v3/auth/#via-oauth-tokens
 [github-tokens]: https://github.com/settings/tokens
+[MIT]: LICENSE
