@@ -3,6 +3,7 @@ package amelia
 import (
 	"fmt"
 	"io/ioutil"
+	"path/filepath"
 	"time"
 )
 
@@ -34,15 +35,17 @@ type Gist struct {
 // NewGist reads the given files and creates a new Gist
 func NewGist(description *string, public *bool, fileNames []string) (*Gist, error) {
 	files := make(map[GistFilename]GistFile)
-	for _, name := range fileNames {
-		raw, err := ioutil.ReadFile(name)
+	for _, fileName := range fileNames {
+		raw, err := ioutil.ReadFile(fileName)
 		if err != nil {
 			return nil, fmt.Errorf("unable to read file: %v", err)
 		}
 
+		baseName := filepath.Base(fileName)
 		content := string(raw)
-		files[GistFilename(name)] = GistFile{
-			Filename: &name,
+
+		files[GistFilename(baseName)] = GistFile{
+			Filename: &baseName,
 			Content:  &content,
 		}
 	}
