@@ -48,8 +48,17 @@ To create a secret Gist with the default description and multiple files run the 
 Distributed under the terms of the [MIT License][MIT], amelia is free and open
 source software.
 
+## Project name
+
+> A Saboscrivner can write about food so accurately that people get the
+> sensation of taste when they read about the food. Amelia Mintz is a
+> Saboscrivner.
+
+[Wikipedia: Chew Comic Book Series][wikipedia]
+
 [amelia]: https://github.com/hackebrot/amelia
 [github-api]: https://developer.github.com/v3/
 [github-auth]: https://developer.github.com/v3/auth/#via-oauth-tokens
 [github-tokens]: https://github.com/settings/tokens
 [MIT]: LICENSE
+[wikipedia]: https://en.wikipedia.org/wiki/Chew_(comics)#Saboscrivner
