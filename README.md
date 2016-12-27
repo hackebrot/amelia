@@ -1,5 +1,8 @@
 # amelia
 
+[![license](https://img.shields.io/github/license/hackebrot/amelia.svg)][amelia]
+[![amelia on GitHub](https://img.shields.io/github/forks/hackebrot/amelia.svg?style=social&label=Fork)][amelia]
+
 Create GitHub Gists from your CLI
 
 ## Installation
@@ -40,6 +43,7 @@ To create a secret Gist with the default description and multiple files run the 
     $ amelia file1.txt file2.txt
 
 
+[amelia]: https://github.com/hackebrot/amelia
 [github-api]: https://developer.github.com/v3/
 [github-auth]: https://developer.github.com/v3/auth/#via-oauth-tokens
 [github-tokens]: https://github.com/settings/tokens
