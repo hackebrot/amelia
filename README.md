@@ -48,6 +48,14 @@ To create a secret Gist with the default description and multiple files run the 
 Distributed under the terms of the [MIT License][MIT], amelia is free and open
 source software.
 
+
+## Code of Conduct
+
+Please note that this project is released with a [Contributor Code of Conduct][Code of Conduct].
+
+By participating in this project you agree to abide by its terms.
+
+
 ## Project name
 
 > A Saboscrivner can write about food so accurately that people get the
@@ -61,4 +69,5 @@ source software.
 [github-auth]: https://developer.github.com/v3/auth/#via-oauth-tokens
 [github-tokens]: https://github.com/settings/tokens
 [MIT]: LICENSE
+[Code of Conduct]: code_of_conduct.md
 [wikipedia]: https://en.wikipedia.org/wiki/Chew_(comics)#Saboscrivner
