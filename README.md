@@ -27,11 +27,14 @@ following environment variables:
 With auth environment variables in place you can now run **amelia**.
 
 ```
--description string
-    A description of the gist. (default "Amelia Gist")
+  -d string
+        description of the gist (default "Amelia Gist")
+  -description string
+        description of the gist (default "Amelia Gist")
 
--public
-    Indicates whether the gist is public. (default false)
+  -p	indicates whether the gist is public
+  -public
+        indicates whether the gist is public
 ```
 
 To create a public Gist with description "Hello World" and a file "helloworld.md" run the following:
