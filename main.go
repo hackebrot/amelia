@@ -8,6 +8,25 @@ import (
 	"github.com/hackebrot/amelia/amelia"
 )
 
+var description string
+var public bool
+
+func init() {
+	const (
+		dDefault = "Amelia Gist"
+		dUsage   = "description of the gist"
+	)
+	flag.StringVar(&description, "description", dDefault, dUsage)
+	flag.StringVar(&description, "d", dDefault, dUsage)
+
+	const (
+		pDefault = false
+		pUsage   = "indicates whether the gist is public"
+	)
+	flag.BoolVar(&public, "public", pDefault, pUsage)
+	flag.BoolVar(&public, "p", pDefault, pUsage)
+}
+
 func loadFromEnv(keys ...string) (map[string]string, error) {
 	env := make(map[string]string)
 
@@ -23,18 +42,6 @@ func loadFromEnv(keys ...string) (map[string]string, error) {
 }
 
 func main() {
-	description := flag.String(
-		"description",
-		"Amelia Gist",
-		"A description of the gist.",
-	)
-
-	public := flag.Bool(
-		"public",
-		false,
-		"Indicates whether the gist is public. (default false)",
-	)
-
 	flag.Parse()
 
 	files := flag.Args()
@@ -50,7 +57,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	n, err := amelia.NewGist(description, public, files)
+	n, err := amelia.NewGist(&description, &public, files)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "ERROR: %v\n", err)
 		os.Exit(1)
