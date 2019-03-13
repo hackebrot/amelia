@@ -1,9 +1,6 @@
 # amelia
 
-[![license](https://img.shields.io/github/license/hackebrot/amelia.svg)][amelia]
-[![amelia on GitHub](https://img.shields.io/github/forks/hackebrot/amelia.svg?style=social&label=Fork)][amelia]
-
-Create GitHub Gists from your CLI
+Create [GitHub gists][gists] from your CLI. 📄
 
 ## Installation
 
@@ -24,7 +21,7 @@ following environment variables:
 
 ## Usage
 
-With auth environment variables in place you can now run **amelia**.
+With auth environment variables in place you can now use **amelia**. 💻
 
 ```
   -d string
@@ -37,26 +34,39 @@ With auth environment variables in place you can now run **amelia**.
         indicates whether the gist is public
 ```
 
-To create a public Gist with description "Hello World" and a file "helloworld.md" run the following:
+To create a public gist with description "Hello World" and a file
+"helloworld.md" run the following:
 
-    $ amelia -public -description "Hello World" helloworld.md
+```text
+$ amelia -public -description "Hello World" helloworld.md
+```
 
-To create a secret Gist with the default description and multiple files run the following:
+To create a secret gist with the default description and multiple files run the following:
 
-    $ amelia file1.txt file2.txt
+```text
+$ amelia file1.txt file2.txt
+```
+
+
+## Community
+
+Would you like to contribute to **amelia**? You're awesome! 😃
+
+Please check out the [good first issue][good first issue] label for tasks, that
+are good candidates for your first contribution to **amelia**. Your
+contributions are greatly appreciated! Every little bit helps, and credit will
+always be given! Find out who has already contributed to **amelia**
+[here][community]!  🌍🌏🌎
+
+Please note that **amelia** is released with a [Contributor Code of
+Conduct][code of conduct]. By participating in this project you agree to abide
+by its terms.
 
 
 ## License
 
-Distributed under the terms of the [MIT License][MIT], amelia is free and open
-source software.
-
-
-## Code of Conduct
-
-Please note that this project is released with a [Contributor Code of Conduct][Code of Conduct].
-
-By participating in this project you agree to abide by its terms.
+Distributed under the terms of the [MIT License][MIT], **amelia** is free and
+open source software.
 
 
 ## Project name
@@ -65,12 +75,14 @@ By participating in this project you agree to abide by its terms.
 > sensation of taste when they read about the food. Amelia Mintz is a
 > Saboscrivner.
 
-[Wikipedia: Chew Comic Book Series][wikipedia]
+[Wikipedia: Chew Comic Book Series][wikipedia] 📚
 
-[amelia]: https://github.com/hackebrot/amelia
+[MIT]: https://github.com/hackebrot/amelia/blob/master/LICENSE
+[code of conduct]: https://github.com/hackebrot/amelia/blob/master/.github/CODE_OF_CONDUCT.md
+[community]: https://github.com/hackebrot/amelia/blob/master/CONTRIBUTORS.md
+[gists]: https://help.github.com/en/articles/about-gists
 [github-api]: https://developer.github.com/v3/
 [github-auth]: https://developer.github.com/v3/auth/#via-oauth-tokens
 [github-tokens]: https://github.com/settings/tokens
-[MIT]: LICENSE
-[Code of Conduct]: code_of_conduct.md
+[good first issue]: https://github.com/hackebrot/amelia/labels/good%20first%20issue
 [wikipedia]: https://en.wikipedia.org/wiki/Chew_(comics)#Saboscrivner
